@@ -1,0 +1,10 @@
+extends base
+block content
+  if error 
+    span= error
+  form(method="POST")
+    input(type="text" placeholder="name" name="name" required value=`${loggedInUser.name}`) 
+    input(type="email" placeholder="email" name="email" required value=`${loggedInUser.email}`) 
+    input(type="text" placeholder="username" name="username" required value=`${loggedInUser.username}`) 
+    input(type="text" placeholder="location" name="location" required value=`${loggedInUser.location}`) 
+    input(type="submit" value="Update profile") 
